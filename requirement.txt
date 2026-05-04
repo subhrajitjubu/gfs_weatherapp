@@ -1,0 +1,16 @@
+panel
+xarray
+cartopy
+hvplot
+netcdf4
+numpy
+ncep_data_req==0.1.2.3
+streamlit
+netCDF4
+matplotlib
+folium
+scikit-learn 
+streamlit_folium
+metpy
+seaborn
+colormaps

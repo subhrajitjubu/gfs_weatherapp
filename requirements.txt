@@ -5,7 +5,7 @@ hvplot
 netcdf4
 numpy
 ncep_data_req==0.1.2.3
-streamlit
+streamlit==1.36.0
 netCDF4
 matplotlib
 folium

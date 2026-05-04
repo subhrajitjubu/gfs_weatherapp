@@ -2,6 +2,7 @@ pip==26.1
 panel
 xarray
 cartopy
+pillow==11.0.0
 hvplot
 netcdf4
 numpy

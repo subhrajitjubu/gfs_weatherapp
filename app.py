@@ -47,7 +47,7 @@ with st.sidebar:
     selected_cmap = st.selectbox("Colormap", ["viridis", "plasma", "YlGnBu", "Blues", "RdYlBu_r"])
 
 file_path = fetch_nc_file(selected_year)
-ds = xr.open_dataset(file_path)
+ds = xr.open_dataset(url)
 
 # Identify precipitation variable
 var_candidates = [v for v in ds.data_vars if "precip" in v.lower()]

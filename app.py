@@ -36,7 +36,7 @@ DATA_URL = "https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/netcdf/
 
 try:
     #nc_file = download_data(DATA_URL)
-    ds = load_data(nc_file)['precip']
+    ds = load_data(DATA_URL)['precip']
     
     st.sidebar.header("Settings")
     

@@ -97,8 +97,8 @@ try:
         time_label = "All Time"
     
     # Subset by region
-    precip_slice = precip_slice.sel(lat=slice(lat_range[0], lat_range[1]), 
-                                     lon=slice(lon_range[0], lon_range[1]))
+    precip_slice = precip_slice.sel(latitude=slice(lat_range[0], lat_range[1]), 
+                                     longitude=slice(lon_range[0], lon_range[1]))
     
     # Plot
     st.subheader(f"Rainfall for {time_label}")
@@ -123,8 +123,8 @@ try:
     ax.set_title(f"CHIRPS Monthly Rainfall - {time_label}", fontsize=14, fontweight="bold")
     
     # Add coordinate labels
-    lats = precip_slice.lat.values
-    lons = precip_slice.lon.values
+    lats = precip_slice.latitude.values
+    lons = precip_slice.longitude.values
     
     if len(lats) > 5:
         lat_ticks = np.linspace(0, len(lats)-1, 6, dtype=int)
@@ -141,7 +141,7 @@ try:
         ax.set_xticklabels([])
     
     ax.set_xlabel("Longitude")
-    ax.set_ylabel("Latitude")
+    ax.set_ylabel("itude")
     
     plt.tight_layout()
     st.pyplot(fig)

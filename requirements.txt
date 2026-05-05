@@ -1,11 +1,9 @@
-python==3.10
 pip==26.1
 panel
 xarray
 hvplot
 netcdf4
 numpy
-streamlit==1.36.0
 netCDF4
 matplotlib
 folium

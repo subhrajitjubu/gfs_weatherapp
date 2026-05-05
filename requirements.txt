@@ -1,12 +1,9 @@
 pip==26.1
 panel
 xarray
-cartopy
-pillow==11.0.0
 hvplot
 netcdf4
 numpy
-ncep_data_req==0.1.2.3
 streamlit==1.36.0
 netCDF4
 matplotlib

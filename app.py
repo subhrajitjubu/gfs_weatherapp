@@ -24,7 +24,7 @@ def fetch_nc_file(year_int):
             with open(file_path, "wb") as f:
                 for chunk in response.iter_content(chunk_size=8192):
                     f.write(chunk)
-    return file_path
+    return url
 
 with st.sidebar:
     st.header("Configuration")
@@ -47,7 +47,7 @@ with st.sidebar:
     selected_cmap = st.selectbox("Colormap", ["viridis", "plasma", "YlGnBu", "Blues", "RdYlBu_r"])
 
 file_path = fetch_nc_file(selected_year)
-ds = xr.open_dataset(url)
+ds = xr.open_dataset(file_path)
 
 # Identify precipitation variable
 var_candidates = [v for v in ds.data_vars if "precip" in v.lower()]
